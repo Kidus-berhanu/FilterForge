@@ -1,0 +1,41 @@
+<div>
+  <div>
+    <h2>{{ title }}</h2>
+  </div>
+  <div>
+    <label for="search">Search:</label>
+    <input type="text" id="search" [(ngModel)]="search" placeholder="Type to search...">
+  </div>
+  <div style="margin: 20px 0;">
+    <table mat-table [dataSource]="dataSource | search:search" class="mat-elevation-z8" aria-label="User Details Table">
+
+      <ng-container matColumnDef="firstName">
+        <th mat-header-cell *matHeaderCellDef> First Name </th>
+        <td mat-cell *matCellDef="let element"> {{ element.firstName }} </td>
+      </ng-container>
+
+      <ng-container matColumnDef="lastName">
+        <th mat-header-cell *matHeaderCellDef> Last Name </th>
+        <td mat-cell *matCellDef="let element"> {{ element.lastName }} </td>
+      </ng-container>
+
+      <ng-container matColumnDef="dept">
+        <th mat-header-cell *matHeaderCellDef> Department </th>
+        <td mat-cell *matCellDef="let element"> {{ element.dept }} </td>
+      </ng-container>
+
+      <ng-container matColumnDef="salary">
+        <th mat-header-cell *matHeaderCellDef> Salary </th>
+        <td mat-cell *matCellDef="let element"> ${{ element.salary }} </td>
+      </ng-container>
+
+      <ng-container matColumnDef="doj">
+        <th mat-header-cell *matHeaderCellDef> Joining Date </th>
+        <td mat-cell *matCellDef="let element"> {{ element.doj }} </td>
+      </ng-container>
+
+      <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+      <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+    </table>
+  </div>
+</div>
