@@ -2,6 +2,9 @@
 
 This project, FilterForge, was generated with [Angular CLI](https://github.com/angular/angular-cli) version 17.1.3.
 
+![Screenshot](https://github.com/Kidus-berhanu/FilterForge/blob/main/Screenshot%202024-02-17%20020927.png?raw=true)
+
+
 ## Development Server
 
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
